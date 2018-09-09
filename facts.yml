@@ -1,0 +1,9 @@
+- name: Group hosts by distribution
+  hosts: vagrant
+  gather_facts: true
+  tasks:
+    - name: create groups based on distro
+      group_by: key={{ansible_distribution}}
+
+    - debug: msg="groups={{groups}}"
+      run_once: true

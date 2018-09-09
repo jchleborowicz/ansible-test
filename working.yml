@@ -1,0 +1,6 @@
+- name: Test playbook
+  hosts: vagrant1
+  vars:
+    name: Jacek
+  tasks:
+    - debug: var=name
