@@ -1,0 +1,9 @@
+- name: show registered variable
+  hosts: vagrant1
+  tasks:
+    - command: whoami
+      register: login
+    - debug:
+        var: login
+    - debug:
+        msg: "Logged in as user {{login.stdout}}"

@@ -1,0 +1,9 @@
+- name: ansible_local_tests
+  hosts: all
+  tasks:
+    - name: print ansible_local
+      debug:
+        var: ansible_local
+    - name: print book title
+      debug:
+        msg: "the title of the book is {{ansible_local.example.book}}"

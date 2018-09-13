@@ -1,0 +1,5 @@
+- name: prints out operating system
+  hosts: all
+  tasks:
+    - debug:
+        var: ansible_distribution
